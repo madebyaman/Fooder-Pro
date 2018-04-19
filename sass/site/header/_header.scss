@@ -1,0 +1,54 @@
+.site-header {
+  width: $site__width;
+  max-width: $site__width-max;
+  margin: 0 auto;
+  padding: 1em 0;
+  margin-bottom: 3em;
+}
+
+.site-branding {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media (min-width: $query__small) {
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .site-branding {
+      display: inline-block;
+      flex: 1 0 auto;
+    }
+  }
+}
+
+.site-title {
+  margin: 0;
+  padding: 0;
+  font-size: 1.6em;
+  font-weight: bold;
+  line-height: 1em;
+  a {
+    color: $color__action;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.custom-logo-link {
+  img {
+    width: 100px;
+    height: auto;
+  }
+}
+
+/*
+ Header Menu
+*/
+
+@import "header-menu";

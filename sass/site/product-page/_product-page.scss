@@ -1,0 +1,77 @@
+.product_pages-template-default {
+  .site-header,
+  .site-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+  .site-header {
+    background-color: #666666;
+    text-align: center;
+  }
+  .site-content header {
+    padding-bottom: 5em;
+    background: url('images/hero-bg.png') bottom center repeat-x;
+  }
+  .product-description,
+  .site-content .header-wrapper,
+  .site-branding,
+  .product-testimonial,
+  .site-info {
+    width: 80%;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .product-description img {
+    transform: rotate(-15deg);
+    display: inherit;
+    margin: 0 auto;
+  }
+  .call-to-action {
+    text-align: center;
+    padding: 5em 0;
+    background: #FAF5F8;
+    p {
+      text-transform: uppercase;
+      color: #bebebe;
+      font-size: 70%;
+      margin: 0;
+    }
+    a {
+      @extend %main-button;
+      display: inline-block;
+      padding: 1rem 1.5rem;
+      font-size: 100%;
+      margin-top: 0;
+    }
+  }
+  .product-testimonial {
+    padding: 1em 0;
+    p>img {
+      float: left;
+      width: 100px;
+      border-radius: 50%;
+    }
+    .customer {
+      width: 80%;
+      margin-left: auto;
+      margin-top: 0;
+      color: gray;
+      font-size: 80%;
+    }
+    .testimonial {
+      width: 80%;
+      margin-bottom: 1em;
+      margin-left: auto;
+    }
+  }
+  .site-info {
+    display: inherit;
+    text-align: center;
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}

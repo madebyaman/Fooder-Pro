@@ -1,0 +1,122 @@
+.front-page-wrapper {
+  display: inline-block;
+  h1 {
+    font-size: 2em;
+    margin-top: 0;
+    text-transform: none;
+    line-height: 3rem;
+    margin-bottom: 0;
+  }
+  p {
+    margin: 1rem 0;
+  }
+  input[type='email'] {
+    display: inline-block;
+    border-radius: 0;
+    padding: 0.7em 1em;
+    width: 70%;
+    border-color: #404040;
+  }
+}
+
+.front-page-wrapper button,
+.featured-product a {
+  @extend %main-button;
+}
+
+@media (min-width: $query__small) {
+  .front-page-hero {
+    display: flex;
+    align-items: center;
+  }
+  .front-page-wrapper {
+    background: white;
+    width: 70%;
+    display: inline-block;
+    padding: 3rem 2em 2em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2), 0 15px 35px rgba(0, 0, 0, .1);
+    z-index: 10;
+    margin-right: -15%;
+  }
+  .front-page-hero figure {
+    display: inline-block;
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.featured-images {
+  margin-top: 5em;
+  img {
+    width: 300px;
+    height: auto;
+    margin: 10px;
+    opacity: 0.4;
+  }
+  @media (min-width: $query__small) {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+.featured-product {
+  background: linear-gradient(to bottom, rgba(242, 242, 242, .3), rgba(242, 242, 242, .3)), url(images/tic-tac-toe.png) repeat;
+  background-attachment: fixed;
+  padding: 5em 0;
+  .product-content-wrapper {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+    a {
+      display: inline-block;
+      margin-bottom: 1em;
+      align-self: flex-start;
+    }
+  }
+  h2 {
+    margin: 0 0 1rem;
+  }
+}
+
+@media (min-width: $query__small) {
+  .product-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .product-content {
+    margin-right: 1.5em;
+    display: flex;
+    flex-direction: column;
+    a {
+      margin-top: auto;
+      text-align: left;
+    }
+  }
+}
+
+@media (min-width: $query__small) {
+  .front-page-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    article {
+      flex-basis: 45%;
+    }
+  }
+}
+
+.front-page-posts {
+  margin-bottom: -3em;
+}
+
+.recent-posts {
+  h3 {
+    margin: 1rem 0 2em;
+  }
+  h2 {
+    margin: 2em 0 1rem;
+  }
+}

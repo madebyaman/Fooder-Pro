@@ -1,0 +1,17 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $color__text-main;
+	font-family: $font__sans;
+	@include font-size(0.8);
+	line-height: $font__line-height-body;
+	@media (min-width: 768px) {
+		@include font-size(1);
+	}
+}
+
+@import "headings";
+@import "copy";

@@ -1,0 +1,29 @@
+.footer-menu,
+.site-info {
+  display: inline-block;
+  ul {
+    display: flex;
+    padding: 0;
+    margin: 1em 0 0;
+    li:nth-of-type(n+2) {
+      margin-left: 1em;
+    }
+  }
+}
+
+@media (min-width: $query__small) {
+  .footer-info {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.simple-social-icons ul li a {
+  background-color: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  &:hover,
+  &:focus {
+    color: white;
+  }
+}

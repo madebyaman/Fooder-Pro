@@ -1,0 +1,53 @@
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+.comments-title {
+	font-size: 1.8rem;
+	border-bottom: 4px solid $color__action;
+	padding-bottom: 1rem;
+}
+
+.comment-list {
+	list-style: none;
+	article {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		margin-bottom: 2rem;
+		padding-bottom: 1rem;
+	}
+	.children {
+		list-style: none;
+	}
+}
+
+.avatar {
+	width: 50px;
+	height: auto;
+	border-radius: 50%;
+	float: left;
+	margin-right: 10px;
+}
+
+.comment-meta,
+.reply {
+	font-size: 80%;
+	font-weight: lighter;
+	.fn {
+		font-weight: lighter;
+	}
+	.edit-link {
+		margin-left: 5px;
+	}
+}
+
+.comment-reply-title {
+	font-size: 1.8rem;
+}
+
+.comment-content {
+	font-size: 90%;
+}
