@@ -6,6 +6,7 @@
     text-transform: none;
     line-height: 3rem;
     margin-bottom: 0;
+    text-align: center;
   }
   p {
     margin: 1rem 0;
@@ -38,22 +39,29 @@
     z-index: 10;
     margin-right: -15%;
   }
-  .front-page-hero figure {
+  .front-page-hero .featured-image {
     display: inline-block;
     width: 60%;
     height: auto;
     display: flex;
     justify-content: flex-end;
+    img {
+      width: 400px;
+      height: 600px;
+      object-fit: cover;
+    }
   }
 }
 
 .featured-images {
   margin-top: 5em;
   img {
-    width: 300px;
-    height: auto;
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
     margin: 10px;
-    opacity: 0.4;
+    opacity: 0.3;
+    box-shadow: none;
   }
   @media (min-width: $query__small) {
     display: flex;
@@ -94,6 +102,11 @@
       margin-top: auto;
       text-align: left;
     }
+  }
+  .product-image {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
   }
 }
 

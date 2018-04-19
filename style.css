@@ -1049,6 +1049,7 @@ a:hover, a:active {
 	text-transform: none;
 	line-height: 3rem;
 	margin-bottom: 0;
+	text-align: center;
 }
 
 .front-page-wrapper p {
@@ -1079,7 +1080,7 @@ a:hover, a:active {
 		z-index: 10;
 		margin-right: -15%;
 	}
-	.front-page-hero figure {
+	.front-page-hero .featured-image {
 		display: inline-block;
 		width: 60%;
 		height: auto;
@@ -1088,6 +1089,12 @@ a:hover, a:active {
 		-ms-flex-pack: end;
 		    justify-content: flex-end;
 	}
+	.front-page-hero .featured-image img {
+		width: 400px;
+		height: 600px;
+		-o-object-fit: cover;
+		   object-fit: cover;
+	}
 }
 
 .featured-images {
@@ -1095,10 +1102,13 @@ a:hover, a:active {
 }
 
 .featured-images img {
-	width: 300px;
-	height: auto;
+	width: 150px;
+	height: 100px;
+	-o-object-fit: cover;
+	   object-fit: cover;
 	margin: 10px;
-	opacity: 0.4;
+	opacity: 0.3;
+	box-shadow: none;
 }
 
 @media (min-width: 600px) {
@@ -1152,6 +1162,12 @@ a:hover, a:active {
 	.product-content a {
 		margin-top: auto;
 		text-align: left;
+	}
+	.product-image {
+		width: 50%;
+		height: 50%;
+		-o-object-fit: cover;
+		   object-fit: cover;
 	}
 }
 
