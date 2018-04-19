@@ -189,14 +189,6 @@ function fooder_resource_hints($urls, $relation_type)
 }
 add_filter('wp_resource_hints', 'fooder_resource_hints', 10, 2);
 
-
-
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
 /**
  * Custom template tags for this theme.
  */
@@ -235,3 +227,205 @@ function fooder_excerpt_length($length)
 	return 60;
 }
 add_filter('excerpt_length', 'fooder_excerpt_length');
+
+/**
+ * Advanced Custom Fields
+ */
+
+define('ACF_LITE', true);
+
+include_once('advanced-custom-fields/acf.php');
+
+if (function_exists("register_field_group")) {
+	register_field_group(array(
+		'id' => 'acf_front-page-headlines',
+		'title' => 'Front Page Headlines',
+		'fields' => array(
+			array(
+				'key' => 'field_5ad76af79ec78',
+				'label' => 'Headline',
+				'name' => 'headline',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array(
+				'key' => 'field_5ad72e60d34b4',
+				'label' => 'Form Action',
+				'name' => 'form_action',
+				'type' => 'text',
+				'required' => 1,
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array(
+				'key' => 'field_5ad72ed4d34b5',
+				'label' => 'Social Proof Image One',
+				'name' => 'social_proof_image_one',
+				'type' => 'image',
+				'save_format' => 'url',
+				'preview_size' => 'fooder-social-proof',
+				'library' => 'all',
+			),
+			array(
+				'key' => 'field_5ad72f63d34b6',
+				'label' => 'Social Proof Image Two',
+				'name' => 'social_proof_image_two',
+				'type' => 'image',
+				'save_format' => 'url',
+				'preview_size' => 'fooder-social-proof',
+				'library' => 'all',
+			),
+			array(
+				'key' => 'field_5ad72f77d34b7',
+				'label' => 'Social Proof Image Three',
+				'name' => 'social_proof_image_three',
+				'type' => 'image',
+				'save_format' => 'url',
+				'preview_size' => 'fooder-social-proof',
+				'library' => 'all',
+			),
+			array(
+				'key' => 'field_5ad72f94d34b8',
+				'label' => 'Product Headline',
+				'name' => 'product_headline',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array(
+				'key' => 'field_5ad72ff6d34b9',
+				'label' => 'Product Description',
+				'name' => 'product_description',
+				'type' => 'textarea',
+				'default_value' => '',
+				'placeholder' => '',
+				'maxlength' => '',
+				'rows' => '',
+				'formatting' => 'html',
+			),
+			array(
+				'key' => 'field_5ad7302cd34ba',
+				'label' => 'Product Image',
+				'name' => 'product_image',
+				'type' => 'image',
+				'save_format' => 'url',
+				'preview_size' => 'product-image',
+				'library' => 'all',
+			),
+			array(
+				'key' => 'field_5ad766f483368',
+				'label' => 'Product URL',
+				'name' => 'product_url',
+				'type' => 'text',
+				'required' => 1,
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array(
+				'key' => 'field_5ad7670983369',
+				'label' => 'Product Button Text',
+				'name' => 'product_button_text',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'page_type',
+					'operator' => '==',
+					'value' => 'front_page',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array(
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array(
+				0 => 'permalink',
+				1 => 'excerpt',
+			),
+		),
+		'menu_order' => 0,
+	));
+	register_field_group(array(
+		'id' => 'acf_product-page',
+		'title' => 'Product Page',
+		'fields' => array(
+			array(
+				'key' => 'field_5ad8453344822',
+				'label' => 'Product Video URL',
+				'name' => 'product_video_url',
+				'type' => 'text',
+				'required' => 1,
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'html',
+				'maxlength' => '',
+			),
+			array(
+				'key' => 'field_5ad845d9a4341',
+				'label' => 'Call to Action',
+				'name' => 'call_to_action',
+				'type' => 'wysiwyg',
+				'required' => 1,
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
+			array(
+				'key' => 'field_5ad8466aa4342',
+				'label' => 'Testimonial',
+				'name' => 'testimonial',
+				'type' => 'wysiwyg',
+				'required' => 1,
+				'default_value' => '',
+				'toolbar' => 'full',
+				'media_upload' => 'yes',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'product_pages',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array(
+			'position' => 'normal',
+			'layout' => 'no_box',
+			'hide_on_screen' => array(),
+		),
+		'menu_order' => 0,
+	));
+}
