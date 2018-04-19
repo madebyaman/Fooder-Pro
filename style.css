@@ -1139,6 +1139,7 @@ a:hover, a:active {
 	margin-bottom: 1em;
 	-ms-flex-item-align: start;
 	    align-self: flex-start;
+	color: white;
 }
 
 .featured-product h2 {
