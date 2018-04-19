@@ -43,7 +43,7 @@
 	// Customize theme action color
 	wp.customize('theme_action_color', function (value) {
 		value.bind(function (to) {
-			$('.front-page-wrapper button, .featured-product a, .product_page-template-default .call-to-action a, .footer-links form button,button:hover, button:focus, button:active, input[type = "button"]: hover, input[type = "button"]: focus, input[type = "button"]: active,	input[type = "reset"]: hover,	input[type = "reset"]: focus, input[type = "reset"]: active, input[type = "submit"]: hover, input[type = "submit"]: focus, input[type = "submit"]: active, .reply a:hover, .reply a:focus, .reply a:active, .category-sticky::before ').css({
+			$('.front-page-wrapper button, .featured-product a, .product_page-template-default .call-to-action a, .footer-links form button, button:hover, button:focus, button:active, input[type="button"]:hover, input[type="button"]:focus, input[type="button"]:active,	input[type="reset"]:hover,	input[type="reset"]:focus, input[type="reset"]:active, input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:active, .reply a:hover, .reply a:focus, .reply a:active, .category-sticky::before ').css({
 				'background': to
 			});
 			$('blockquote, .category-sticky, .comments-title').css({
@@ -57,7 +57,7 @@
 				'color': to
 			});
 			$('.entry-content a, .wp-caption a a, .comment-content a, .comment-metadata a, .continue-reading a ').css({
-				'background': 'linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(' + to + ',' + to ')',
+				'background': 'linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(' + to + ',' + to + ')',
 				'background-repeat': 'no-repeat, no-repeat, repeat-x',
 				'background-position': '0 95%, 100% 95%, 0 95%',
 				'background-size': '.05em 1px, .05em 1px, 1px 1px',
